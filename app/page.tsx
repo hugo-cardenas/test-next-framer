@@ -2,8 +2,16 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { use, useEffect, useState } from "react";
 
 export default function Home() {
+  const [enabled, setEnabled] = useState(false);
+  useEffect(() => {
+    setEnabled(true);
+  }, []);
+
+  if (!enabled) return null;
+
   return (
     <main className="flex h-screen flex-col items-center justify-between p-24 gap-16">
       <div className="flex flex-col items-center pt-32 h-screen gap-4">
