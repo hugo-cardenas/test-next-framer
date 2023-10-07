@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <main className="flex h-screen flex-col items-center justify-center p-24 gap-1">
       <div className="flex flex-row justify-center items-center h-14 w-36 px-4 gap-1 bg-gray-200">
-        {/* <div>TITLE</div> */}
         <motion.div
           className="w-10 h-10 bg-red-400"
           initial={{ opacity: 1, y: 60 }}
@@ -23,7 +22,7 @@ export default function Home() {
             opacity: 1,
             y: 0,
           }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
         />
         <motion.div
           className="w-10 h-10 bg-blue-400"
@@ -32,7 +31,11 @@ export default function Home() {
             opacity: 1,
             y: 0,
           }}
-          transition={{ delay: 1, duration: 1 }}
+          transition={{
+            delay: 1,
+            duration: 0.5,
+            ease: "easeOut",
+          }}
         />
       </div>
       <div className="flex flex-row justify-center items-center h-14 w-36 px-4 gap-4 bg-gray-200" />
