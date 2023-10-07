@@ -1,19 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { use, useEffect, useState } from "react";
 
 export default function Home() {
-  const [enabled, setEnabled] = useState(false);
-  useEffect(() => {
-    setEnabled(true);
-  }, []);
-
-  if (!enabled) return null;
-
   return (
-    <main className="flex h-screen flex-col items-center justify-center p-24 gap-1">
+    <main className="flex h-screen flex-col items-center justify-center gap-1">
       <div className="flex flex-row justify-center items-center w-[224px] h-[116px] px-2 gap-2 bg-gray-300">
         <motion.div
           className="w-[100px] h-[100px] bg-red-400"
@@ -34,12 +25,10 @@ export default function Home() {
           transition={{
             delay: 1,
             duration: 0.5,
-            ease: "easeOut",
           }}
         />
       </div>
       <div className="flex flex-row justify-center items-center w-[224px] h-[116px] px-2 gap-2 bg-gray-300" />
-      {/* <div className="flex flex-row justify-center items-center h-14 w-36 px-4 gap-4 bg-gray-200" /> */}
     </main>
   );
 }
