@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 export default function Home() {
   return (
     <main className="flex h-screen flex-col items-center justify-center gap-1">
+      Foo
       <div className="flex flex-row justify-center items-center w-[224px] h-[116px] px-2 gap-2 bg-gray-300">
         <motion.div
           className="w-[100px] h-[100px] bg-red-400"
